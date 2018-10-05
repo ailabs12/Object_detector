@@ -8,4 +8,4 @@ const darknet = new Darknet({
     namefile: '../coco.names'
 });
 
-console.log("Objects:", darknet.detect('./peoples.jpg'));
+console.log("Objects:", darknet.detect('./dog.jpg'));
