@@ -9,7 +9,7 @@ const darknet = new Darknet({
     namefile: './coco.names'
 });
 
-const urlImage = __dirname + '/dog.jpg';
+const urlImage = __dirname + '/peoples.jpg';
 
 // Преобразование изображения в base64
 nodeBase64Image.encode(urlImage, { string: true, local: true }, function (err, imageBase64) {
