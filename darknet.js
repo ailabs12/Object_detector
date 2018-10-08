@@ -35,6 +35,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var cv = require('opencv4nodejs');
 var ffi = require("ffi");
 var ref = require("ref");
 var Struct = require("ref-struct");
@@ -162,7 +163,7 @@ var DarknetBase = /** @class */ (function () {
                         _a.sent();
                         pnum = ref.alloc('int');
                         return [4 /*yield*/, new Promise(function (res, rej) {
-                                return _this.darknet.get_network_boxes.async(net, image.w, image.h, thresh, hier_thresh, ref.NULL_POINTER, 0, pnum, function (err, dets) { return err ? rej(err) : res(dets); });
+                            return _this.darknet.get_network_boxes.async(net, image.w, image.h, thresh, hier_thresh, ref.NULL_POINTER, 0, pnum, function (err, dets) { return err ? rej(err) : res(dets); });
                             })];
                     case 2:
                         dets = _a.sent();
@@ -200,6 +201,28 @@ var DarknetBase = /** @class */ (function () {
             // memory is owned by JS and will GC eventually
         }
         return detection;
+    };
+    /**
+     * Synchronously detect objects in an base64.
+     * @param imageBase64 image base64
+     */
+
+    DarknetBase.prototype.detectBase64 = function (imageBase64) {
+        if (!imageBase64)
+            throw 'Do specify an image in base64 format'
+
+        imageBase64 = imageBase64.replace('data:image/jpeg;base64','')
+                                    .replace('data:image/png;base64','');
+        const buffer = Buffer.from(imageBase64, 'base64');
+        const image = cv.imdecode(buffer);
+
+        let result = this.detect({
+            b: image.getData(),
+            w: image.cols,
+            h: image.rows,
+            c: image.channels
+        })
+        return result;
     };
     /**
      * Get a Darknet Image from path
