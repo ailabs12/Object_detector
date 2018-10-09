@@ -221,8 +221,22 @@ var DarknetBase = /** @class */ (function () {
             w: image.cols,
             h: image.rows,
             c: image.channels
-        })
+        });
+
+        if ( Array.isArray(result) ) {
+            result.forEach(element => {
+                if (element && element.box) {
+                    element.rectangle = {
+                        x: element.box.x - (element.box.w / 2),
+                        y: element.box.y - (element.box.h / 2),
+                        h: element.box.h + element.box.h / 2,
+                        w: element.box.w + element.box.w / 2,
+                    };
+                }
+            });
+        }
         return result;
+        
     };
     /**
      * Get a Darknet Image from path
