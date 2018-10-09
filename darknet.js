@@ -229,8 +229,8 @@ var DarknetBase = /** @class */ (function () {
                     element.rectangle = {
                         x: element.box.x - (element.box.w / 2),
                         y: element.box.y - (element.box.h / 2),
-                        h: element.box.h + element.box.h / 2,
-                        w: element.box.w + element.box.w / 2,
+                        x2: element.box.x + (element.box.w / 2),
+                        y2: element.box.y + (element.box.h / 2)
                     };
                 }
             });
