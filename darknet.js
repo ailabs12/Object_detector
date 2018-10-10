@@ -226,15 +226,24 @@ var DarknetBase = /** @class */ (function () {
         if ( Array.isArray(result) ) {
             result.forEach(element => {
                 if (element && element.box) {
-                    element.rectangle = {
-                        x: element.box.x - (element.box.w / 2),
-                        y: element.box.y - (element.box.h / 2),
-                        x2: element.box.x + (element.box.w / 2),
-                        y2: element.box.y + (element.box.h / 2)
-                    };
+                    element['x0'] = element.box.x - element.box.w/2;
+                    element['y0'] = element.box.y - element.box.h/2;
                 }
             });
         }
+
+        // if ( Array.isArray(result) ) {
+        //     result.forEach(element => {
+        //         if (element && element.box) {
+        //             element.rectangle = {
+        //                 x: element.box.x - (element.box.w / 2),
+        //                 y: element.box.y - (element.box.h / 2),
+        //                 x2: element.box.x + (element.box.w / 2),
+        //                 y2: element.box.y + (element.box.h / 2)
+        //             };
+        //         }
+        //     });
+        // }
         return result;
         
     };
