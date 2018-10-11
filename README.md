@@ -107,5 +107,4 @@ darknet.detectAsync('/image/of/an/eagle.jpg')
 
 ## Использование:
 let darknet = require('object_detector');
-
 let result = darknet.detectBase64('base64 код изображения');
