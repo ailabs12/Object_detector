@@ -9,5 +9,6 @@ examples/yolov3-tiny.cfg
 examples/yolov3-tiny.weights
 examples/coco.names
 
-yolov3.weights
+examples/yolov3.weights
+examples/yolov3.cfg
 package-lock.json
