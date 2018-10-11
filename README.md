@@ -1,4 +1,4 @@
-# Darknet.JS
+# Object detector
 A Node wrapper of pjreddie's open source neural network framework Darknet, using the Foreign Function Interface Library. Read: YOLOv3 in JavaScript.
 
 ## Prerequisites
