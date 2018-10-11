@@ -1,11 +1,10 @@
 {
-  "name": "darknet",
-  "version": "1.3.6",
+  "name": "object_detector",
+  "version": "0.0.1",
   "description": "",
   "main": "darknet.js",
   "typings": "darknet.d.ts",
   "repository": "https://github.com/bennetthardwick/darknet.js",
-  "homepage": "https://github.com/bennetthardwick/darknet.js",
   "scripts": {
     "test": "./examples/example && jasmine",
     "install": "./install-script.sh",
@@ -13,16 +12,6 @@
     "prepublishOnly": "tsc",
     "clean": "rm libdarknet.*"
   },
-  "keywords": [
-    "darknet",
-    "yolo",
-    "yolov3",
-    "yolov3-tiny",
-    "object detection",
-    "machine learning"
-  ],
-  "author": "Bennett Hardwick <bennetthardwick@icloud.com> (bennetthardwick.com)",
-  "license": "MIT",
   "dependencies": {
     "ffi": "git+https://github.com/node-ffi/node-ffi.git",
     "node-base64-image": "^1.0.5",
