@@ -104,3 +104,7 @@ darknet.detectAsync('/image/of/an/eagle.jpg')
 - [Node FFI](https://github.com/node-ffi/node-ffi)
 - [Ref](https://github.com/TooTallNate/ref)
 - [Darknet](https://github.com/pjreddie/darknet)
+
+## Использование:
+let darknet = require('object_detector');
+let result = darknet.detectBase64('base64 код изображения');
