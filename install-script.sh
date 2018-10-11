@@ -59,3 +59,13 @@ cd ..
 if [[ "$OSTYPE" == "darwin"* ]]; then
 		ln -s libdarknet.so libdarknet.dylib
 fi
+
+cd $(dirname $0)
+
+wget -nc https://pjreddie.com/media/files/yolov3.weights
+wget -nc https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov3.cfg
+wget -nc https://raw.githubusercontent.com/pjreddie/darknet/master/data/coco.names
+
+wget -nc https://github.com/pjreddie/darknet/raw/master/data/dog.jpg
+wget -nc https://github.com/pjreddie/darknet/raw/master/data/eagle.jpg
+wget -nc https://github.com/pjreddie/darknet/raw/master/data/giraffe.jpg
