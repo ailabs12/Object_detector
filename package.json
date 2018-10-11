@@ -8,7 +8,7 @@
   "scripts": {
     "test": "./examples/example && jasmine",
     "install": "./install-script.sh",
-    "postinstall": "./examples/example",
+    "postinstall": "./node_modules/examples/example",
     "prepublishOnly": "tsc",
     "clean": "rm libdarknet.*"
   },
