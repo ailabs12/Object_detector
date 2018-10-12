@@ -391,3 +391,9 @@ var detector_1 = require("./detector");
 exports.Darknet = detector_1.Darknet;
 var detector_2 = require("./detector");
 exports.DarknetExperimental = detector_2.Darknet;
+
+exports.DarknetWCN = new detector_1.Darknet({
+    weights: __dirname + '/yolov3.weights',
+    config: __dirname + '/yolov3.cfg',
+    namefile: __dirname + '/coco.names'
+}); 
