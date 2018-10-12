@@ -40,6 +40,7 @@ var ffi = require("ffi");
 var ref = require("ref");
 var Struct = require("ref-struct");
 var fs_1 = require("fs");
+var classNameRu = require('./class_name_ru');
 var char_pointer = ref.refType('char');
 var float_pointer = ref.refType('float');
 var int_pointer = ref.refType('int');
@@ -225,7 +226,8 @@ var DarknetBase = /** @class */ (function () {
 
         if ( Array.isArray(result) ) {
             result.forEach(element => {
-                if (element && element.box) {
+                if (element && ('box' in element) && ('name' in element) ) {
+                    element['name_rus'] = classNameRu[ element['name'] ] || '';
                     element['x0'] = element.box.x - element.box.w/2;
                     element['y0'] = element.box.y - element.box.h/2;
                 }
