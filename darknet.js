@@ -227,7 +227,7 @@ var DarknetBase = /** @class */ (function () {
         if ( Array.isArray(result) ) {
             result.forEach(element => {
                 if (element && ('box' in element) && ('name' in element) ) {
-                    element['name_rus'] = classNameRu[ element['name'] ] || '';
+                    element['name_ru'] = classNameRu[ element['name'] ] || '';
                     element['x0'] = element.box.x - element.box.w/2;
                     element['y0'] = element.box.y - element.box.h/2;
                 }
