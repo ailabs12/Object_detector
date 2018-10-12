@@ -1,4 +1,4 @@
-exports.assmas = {'person': 'человек',
+exports = {'person': 'человек',
 			'bicycle': 'велосипед',
 			'car': 'автомобиль',
 			'motorbike': 'мотоцикл',
