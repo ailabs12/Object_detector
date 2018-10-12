@@ -107,4 +107,5 @@ darknet.detectAsync('/image/of/an/eagle.jpg')
 
 ## Использование:
 const objectDetector = require('object_detector').DarknetWCN;
+
 objectDetector.detectBase64(base64 код изображения);
