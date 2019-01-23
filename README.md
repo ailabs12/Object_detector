@@ -1,4 +1,4 @@
-# Object detector
+# Детектор объектов на Nodejs на базе проекта Darknet.js
 ## Использование:
 const { detector } = require('object_detector');
 
